@@ -3,7 +3,7 @@ defmodule Endo.Mixfile do
 
   def project do
     [app: :endo,
-     version: "0.1.0",
+     version: "0.0.1-beta",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
