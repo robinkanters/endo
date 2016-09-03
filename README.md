@@ -1,24 +1,26 @@
 # Endo
 
-**TODO: Add description**
+Translates a SQL query to Ecto query syntax.
+
+```elixir
+iex> Endo.translate("SELECT * FROM Users WHERE age > 18")
+"from u in User, where: u.age > 18, select: u"
+```
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+1. Add `endo` to your list of dependencies in `mix.exs`:
 
-  1. Add `endo` to your list of dependencies in `mix.exs`:
+  ```elixir
+  def deps do
+    [{:endo, "~> 0.1.0"}]
+  end
+  ```
 
-    ```elixir
-    def deps do
-      [{:endo, "~> 0.1.0"}]
-    end
-    ```
+2. Ensure `endo` is started before your application:
 
-  2. Ensure `endo` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:endo]]
-    end
-    ```
-
+  ```elixir
+  def application do
+    [applications: [:endo]]
+  end
+  ```
