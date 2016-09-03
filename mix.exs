@@ -7,7 +7,14 @@ defmodule Endo.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
      deps: deps()]
+  end
+
+  def description do
+    """
+    Translates SQL to Ecto
+    """
   end
 
   # Configuration for the OTP application
