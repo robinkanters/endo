@@ -7,14 +7,9 @@ defmodule Endo.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     description: description,
+     description: description(),
+     package: package(),
      deps: deps()]
-  end
-
-  def description do
-    """
-    Translates SQL to Ecto
-    """
   end
 
   # Configuration for the OTP application
@@ -35,5 +30,23 @@ defmodule Endo.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:ex_doc, ">= 0.0.0", only: :dev}]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Brian van Burken"],
+      licenses: ["Apache 2.0"],
+      links: %{
+        "GitHub" => "https://github.com/brianvanburken/endo",
+        "Docs" => "http://hexdocs.pm/endo/"
+      }
+   ]
+  end
+
+  defp description do
+    """
+    Translates SQL to Ecto
+    """
   end
 end
