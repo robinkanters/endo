@@ -41,11 +41,11 @@ to libraries specific syntax like Ecto, Arel and ActiveRecord.
 This will be a great educational tool for developers that know how to write a
 SQL query but don't know how to covert it to that specific library.
 
-My goal is to make it extendible so other libraries can easily be added. I want
+My goal is to make it extensible so other libraries can easily be added. I want
 to reach this by converting the input to a AST/CST.
 
-I got this inspiration from [http://scuttle.io](http://scuttle.io) where you can convert SQL to Arel.
+I got the inspiration from [http://scuttle.io](http://scuttle.io) where you can convert SQL to Arel.
 
-## Usefull links
+## Useful links
 
 Ecto syntax examples: [http://www.glydergun.com/the-ecto-query-library/](http://www.glydergun.com/the-ecto-query-library/)
